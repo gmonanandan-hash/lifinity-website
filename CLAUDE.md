@@ -76,7 +76,7 @@ These rules come from the copywriting and design tutorials in `PLAYBOOK.md`.
 1. **Lead with value, then how.** Headline = what the reader gets. Subline = how it happens and who it's for.
 2. **Harry Dry's three tests for every line:** Can I visualise it? Can I falsify it? Could nobody else say it?
    - If a line fails all three, rewrite it.
-3. **Facts over opinions.** Write "45-minute call", "licensed in 5 provinces", "recommendations at a second meeting". Not "expert", "best", "trusted".
+3. **Facts over opinions.** Write "45-minute call", "licensed in 5 provinces", "a written summary after every call". Not "expert", "best", "trusted".
 4. **Juxtaposition.** The page's argument is *product first vs plan first*. New sections should support that contrast.
 5. **The unique promise:** "The first thing I tell you is how I'm paid." Keep it prominent.
 6. **Short and plain.** Active voice. No buzzwords ("unlock", "empower", "seamless", "next level").
@@ -104,6 +104,7 @@ G Mon is a **life and accident & sickness (LLQP) licensed agent** in NS, ON, AB,
   - Collect only what the page needs.
   - If you add analytics, cookies or another form, update `privacy.html` first.
   - Newsletter consent wording must stay next to the form (CASL).
+- **Keep the process light.** Never promise that recommendations only come at a second meeting or that nothing is decided on the first call. G Mon may recommend coverage on the first call when there is a clear gap, then sends a written summary. The booking form already confirms people are ready to look at solutions.
 - Any new claim or section should be reviewed by MGA compliance before it goes live.
 
 ## When you change things

@@ -35,7 +35,7 @@ This is what 24 design and copywriting tutorials taught, and where each lesson s
 | Lesson | Source | On the page |
 |---|---|---|
 | Three tests: Can I visualise it? Falsify it? Could nobody else say it? | Harry Dry, *Learn Copywriting in 76 Minutes* | "The first thing I tell you is how I'm paid." |
-| Write matter of fact, not matter of opinion | Harry Dry, *Copywriting secrets* | 45 minutes, 5 provinces, two meetings, 14 days |
+| Write matter of fact, not matter of opinion | Harry Dry, *Copywriting secrets* | 45 minutes, 5 provinces, a written summary, 14 days |
 | Juxtaposition: give the reader two choices | Harry Dry, *Same Ad 22 Times*; Eugene Schwartz via Harry Dry | "Starting with a product / Starting with a plan" |
 | Have something to say: who it's for, what you're against, why you exist | Harry Dry | "Who I work with", the founder note |
 | Ask: would this help a salesperson sell face to face? | Claude Hopkins via Harry Dry | FAQ answers |
