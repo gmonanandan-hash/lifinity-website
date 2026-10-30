@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Lifinity Financial Services: life, health and retirement planning for families and business owners in NS, ON, AB, BC and SK. Start with a 45-minute discovery call.">
+<link rel="canonical" href="https://lifinity.ca/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lifinity.ca/">
+<meta property="og:title" content="Lifinity Financial Services">
+<meta property="og:description" content="Get a plan before you get a policy. Book a 45-minute discovery call with G Mon, RRA.">
+<meta property="og:image" content="https://lifinity.ca/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0F3D36">
+<title>Lifinity Financial Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout concept: "chapters" — a left-aligned editorial column on Stone, broken by Evergreen bands;
+   the logo's L corner and three rising copper dots are the one recurring motif. */
+:root{
+  --bg:#EEEFEA; --surface:#F8F8F4; --ink:#1B1A17; --muted:#55605C; --line:#D2D6CE;
+  --heading:#0F3D36; --link:#0F3D36;
+  --band:#0F3D36; --band-ink:#EEEFEA; --band-muted:#A9BDB7; --band-line:#2A5850;
+  --accent:#B8693C; --cta:#A2582E; --cta-hover:#8B4A25; --cta-ink:#FFFFFF;
+  --frame:#F7F7F2; --frame-line:#DADDD5; --rule:#0F3D36; --deep:#0B2F29;
+  --f-display:"Spectral", Georgia, "Times New Roman", serif;
+  --f-body:"Source Sans 3", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --s-1:.875rem; --s0:1.0625rem; --s1:1.25rem; --s2:1.625rem; --s3:clamp(1.9rem,1.4rem + 1.8vw,2.6rem); --s4:clamp(2.4rem,1.6rem + 3.4vw,4rem);
+  --radius:4px; --wrap:1160px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0C1816; --surface:#12221F; --ink:#E9EBE4; --muted:#A3B0AB; --line:#25342F;
+  --heading:#EEF0EA; --link:#9FD0C2;
+  --band:#0F3D36; --band-ink:#EEEFEA; --band-muted:#A9BDB7; --band-line:#2A5850;
+  --accent:#D08A5C; --cta:#B8693C; --cta-hover:#C97A4B; --cta-ink:#FFFFFF;
+  --frame:#E9EBE4; --frame-line:#C9CDC4; --rule:#2F6E62; --deep:#08201C; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#0C1816; --surface:#12221F; --ink:#E9EBE4; --muted:#A3B0AB; --line:#25342F;
+  --heading:#EEF0EA; --link:#9FD0C2;
+  --band:#0F3D36; --band-ink:#EEEFEA; --band-muted:#A9BDB7; --band-line:#2A5850;
+  --accent:#D08A5C; --cta:#B8693C; --cta-hover:#C97A4B; --cta-ink:#FFFFFF;
+  --frame:#E9EBE4; --frame-line:#C9CDC4; --rule:#2F6E62; --deep:#08201C; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:var(--s0);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+img{max-width:100%;display:block}
+a{color:var(--link);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);color:var(--heading);font-weight:500;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1{font-size:var(--s4);line-height:1.04;letter-spacing:-.02em}
+h2{font-size:var(--s3);line-height:1.12}
+h3{font-size:var(--s1);line-height:1.3;font-weight:600}
+p{margin:0}
+.lede{font-size:var(--s1);line-height:1.55;color:var(--muted);max-width:60ch}
+.eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--f-mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.dots{display:inline-flex;align-items:flex-end;gap:3px;flex:none}
+.dots i{display:block;border-radius:50%;background:var(--accent)}
+.dots i:nth-child(1){width:5px;height:5px}.dots i:nth-child(2){width:7px;height:7px;margin-bottom:3px}.dots i:nth-child(3){width:9px;height:9px;margin-bottom:6px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font:600 1.0625rem/1 var(--f-body);text-decoration:none;border-radius:var(--radius);padding:1rem 1.4rem;transition:background-color .2s ease,color .2s ease,transform .2s ease;cursor:pointer;border:0}
+.btn-primary{background:var(--cta);color:var(--cta-ink)}
+.btn-primary:hover{background:var(--cta-hover)}
+.btn-primary .arr{transition:transform .2s ease}
+.btn-primary:hover .arr{transform:translateX(3px)}
+.btn-quiet{color:var(--heading);padding-inline:.25rem;background:none;text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:2px}
+.btn-quiet:hover{text-decoration-color:var(--accent)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(140%) blur(10px);-webkit-backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-block:.85rem}
+.brand{display:block;width:132px;flex:none}
+.brand svg{width:100%;height:auto;display:block}
+.brand > span{display:block}
+.nav ul{display:flex;gap:1.75rem;list-style:none;margin:0;padding:0}
+.nav ul a{color:var(--ink);text-decoration:none;font-size:.98rem}
+.nav ul a:hover{color:var(--accent)}
+.nav .btn{padding:.7rem 1rem;font-size:.95rem}
+.brand > span.logo-dark{display:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand > span.logo-light{display:none}:root:not([data-theme="light"]) .brand > span.logo-dark{display:block}}
+:root[data-theme="dark"] .brand > span.logo-light{display:none}:root[data-theme="dark"] .brand > span.logo-dark{display:block}
+
+/* hero */
+.hero{padding-block:clamp(3rem,6vw,5.5rem) clamp(3rem,6vw,5rem)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.hero-copy{display:grid;gap:1.6rem;min-width:0}
+.hero-copy .lede strong{color:var(--ink);font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,auto));justify-content:start;gap:.8rem 2.25rem;padding:1.1rem 0 0;margin:.4rem 0 0;border-top:1px solid var(--line);list-style:none}
+.facts li{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.04em;color:var(--muted)}
+.facts b{display:block;font-family:var(--f-display);font-size:1.35rem;font-weight:500;letter-spacing:0;color:var(--heading)}
+
+.portrait{position:relative;margin:0 0 0 22px;min-width:0}
+.portrait .panel{position:relative;background:var(--frame);border:1px solid var(--frame-line);border-radius:var(--radius);aspect-ratio:4/5;overflow:hidden}
+.portrait .panel img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:92%;height:auto}
+.portrait::before{content:"";position:absolute;left:-22px;bottom:-22px;width:46%;height:62%;border-left:12px solid var(--rule);border-bottom:12px solid var(--rule);z-index:0}
+.portrait .panel{z-index:1}
+.portrait .mark-dots{position:absolute;top:-14px;right:-14px;z-index:2;width:58px;height:58px}
+.portrait figcaption{position:absolute;z-index:3;right:14px;bottom:14px;background:var(--band);color:var(--band-ink);padding:.7rem .9rem;border-radius:var(--radius);max-width:78%}
+.portrait figcaption b{display:block;font-family:var(--f-display);font-weight:500;font-size:1.08rem;line-height:1.25}
+.portrait figcaption span{font-size:.82rem;color:var(--band-muted)}
+@media (prefers-reduced-motion: no-preference){
+  .mark-dots circle{transform-box:fill-box;transform-origin:center;animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .mark-dots circle:nth-child(2){animation-delay:.12s}.mark-dots circle:nth-child(3){animation-delay:.24s}
+}
+@keyframes rise{from{transform:translateY(8px) scale(.85)}to{transform:none}}
+
+/* sections */
+section{scroll-margin-top:84px}
+.sec{padding-block:clamp(4rem,8vw,6.5rem)}
+.sec-head{display:grid;gap:1rem;max-width:760px;margin-bottom:clamp(2.2rem,4vw,3.2rem)}
+
+/* product first vs plan first */
+.band{background:var(--band);color:var(--band-ink)}
+.band h2,.band h3{color:var(--band-ink)}
+.band .eyebrow{color:var(--band-muted)}
+.band .lede{color:var(--band-muted)}
+.compare{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--band-line)}
+.compare > div{padding:2rem 2.2rem 2.2rem 0;min-width:0}
+.compare > div + div{padding-left:2.2rem;border-left:1px solid var(--band-line)}
+.compare h3{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--band-muted);margin-bottom:1rem}
+.compare .big{font-family:var(--f-display);font-size:var(--s2);line-height:1.2;margin-bottom:1.4rem}
+.compare ul{list-style:none;margin:0;padding:0;display:grid;gap:.85rem}
+.compare li{display:grid;grid-template-columns:1.4rem 1fr;gap:.6rem;align-items:start;color:var(--band-muted)}
+.compare li::before{content:"";width:9px;height:9px;margin-top:.55em;border:1.5px solid var(--band-muted);border-radius:50%}
+.compare .ours .big{color:#fff}
+.compare .ours li{color:var(--band-ink)}
+.compare .ours li::before{background:var(--accent);border-color:var(--accent)}
+.compare .ours h3{color:var(--accent)}
+
+/* process */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.steps li{padding:1.8rem 2rem 0 0;display:grid;gap:.7rem;align-content:start;min-width:0}
+.steps li + li{padding-left:2rem;border-left:1px solid var(--line)}
+.steps .n{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.1em;color:var(--accent)}
+.steps p{color:var(--muted)}
+.steps .tag{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);letter-spacing:.04em}
+.after-steps{margin-top:2.6rem;display:flex;flex-wrap:wrap;gap:1rem 1.5rem;align-items:center}
+.after-steps .note{color:var(--muted);font-size:.95rem}
+
+/* the plan: rising dots */
+.plan{background:var(--surface);border-block:1px solid var(--line)}
+.stages{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0;padding:0;list-style:none}
+.stages::before{content:"";position:absolute;left:0;top:0;height:160px;border-left:10px solid var(--rule)}
+.stage{display:grid;grid-template-rows:auto auto;min-width:0}
+.stage .rise{height:150px;display:flex;align-items:flex-end;justify-content:center;border-bottom:10px solid var(--rule)}
+.stage .rise span{display:block;border-radius:50%;background:var(--accent)}
+.stage:nth-child(1) .rise span{width:22px;height:22px;margin-bottom:14px}
+.stage:nth-child(2) .rise span{width:30px;height:30px;margin-bottom:44px}
+.stage:nth-child(3) .rise span{width:40px;height:40px;margin-bottom:76px}
+.stage:nth-child(4) .rise span{width:52px;height:52px;margin-bottom:96px}
+.stage .txt{padding:1.4rem 1.4rem 0 1.6rem;display:grid;gap:.5rem}
+.stage .n{font-family:var(--f-mono);font-size:.76rem;letter-spacing:.1em;color:var(--muted)}
+.stage h3{font-size:var(--s2);font-weight:500}
+.stage p{color:var(--muted);font-size:1rem}
+.owners{margin-top:3rem;display:grid;grid-template-columns:auto 1fr;gap:1rem 2rem;align-items:baseline;padding:1.6rem 1.8rem;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius)}
+.owners h3{font-size:var(--s1)}
+.owners p{color:var(--muted)}
+
+/* who */
+.who{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.who div{padding:1.4rem 1.6rem 0 0;min-width:0}
+.who div + div{padding-left:1.6rem;border-left:1px solid var(--line)}
+.who h3{font-size:1.15rem;margin-bottom:.4rem}
+.who p{color:var(--muted);font-size:.98rem}
+
+/* founder letter */
+.letter .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(2rem,6vw,5rem);align-items:start}
+.letter aside{display:grid;gap:1rem;position:sticky;top:110px}
+.letter .avatar{width:112px;height:112px;border-radius:50%;background:var(--frame);overflow:hidden;border:3px solid var(--accent)}
+.letter .avatar img{width:100%;height:auto;transform:translateY(2%) scale(1.9);transform-origin:50% 0}
+.letter aside .name{font-family:var(--f-display);font-size:var(--s2);color:var(--band-ink);line-height:1.2}
+.letter blockquote{margin:0;display:grid;gap:1.15rem;font-family:var(--f-display);font-size:clamp(1.2rem,1rem + .7vw,1.45rem);line-height:1.55;color:var(--band-ink);max-width:62ch}
+.letter blockquote p:first-child::first-letter{float:left;font-size:3.6em;line-height:.8;padding:.08em .1em 0 0;color:var(--accent)}
+.letter .sign{font-family:var(--f-display);font-style:italic;font-size:1.6rem;color:var(--accent);margin-top:.4rem}
+.letter .meaning{margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--band-line);font-family:var(--f-body);font-size:1rem;color:var(--band-muted)}
+.letter .meaning b{color:var(--band-ink);font-weight:600}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(2rem,6vw,5rem);align-items:start}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1.5rem;align-items:center;padding:1.25rem 0;font-family:var(--f-display);font-size:1.28rem;color:var(--heading)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:12px;height:12px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(45deg) translateY(-3px);transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(225deg) translateY(-3px)}
+.faq details p{padding:0 2rem 1.4rem 0;color:var(--muted);max-width:62ch}
+
+/* final CTA + newsletter */
+.final .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2rem,6vw,5rem);align-items:end}
+.final h2{font-size:var(--s4);line-height:1.05}
+.final .lede{margin-top:1.2rem}
+.final .cta-row{margin-top:2rem}
+.news{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;display:grid;gap:.9rem}
+.news h3{font-size:1.2rem;color:var(--heading)}
+.news p{color:var(--muted);font-size:.98rem}
+.news form{display:flex;gap:.5rem;flex-wrap:wrap}
+.news label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.news input[type=email]{flex:1 1 200px;min-width:0;font:inherit;font-size:1rem;padding:.85rem .9rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);color:var(--ink)}
+.news input[type=email]:focus{outline:2px solid var(--accent);outline-offset:1px}
+.news button{background:var(--band);color:var(--band-ink)}
+.news button:hover{background:var(--heading);color:var(--bg)}
+.news small{font-size:.82rem;color:var(--muted)}
+.news .msg{font-size:.92rem;color:var(--heading);font-weight:600}
+
+/* footer */
+footer{background:var(--deep);color:var(--band-muted);padding-block:3.5rem 2.5rem;font-size:.95rem}
+footer .wrap{display:grid;gap:2.2rem}
+.foot-top{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:2rem}
+.foot-top .brand{width:150px}
+.foot-top h4{margin:0 0 .7rem;font-family:var(--f-mono);font-size:.76rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--band-ink)}
+.foot-top a{color:var(--band-ink);text-decoration:none}
+.foot-top a:hover{color:var(--accent)}
+.foot-top p{margin-bottom:.35rem}
+.legal{border-top:1px solid var(--band-line);padding-top:1.6rem;display:grid;gap:.7rem;font-size:.84rem;line-height:1.55}
+.legal .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem 1.5rem}
+.legal a{color:var(--band-ink)}
+
+/* responsive */
+@media (max-width: 960px){
+  .nav ul{display:none}
+  .hero .wrap,.letter .wrap,.faq-grid,.final .wrap{grid-template-columns:minmax(0,1fr)}
+  .portrait{max-width:420px;margin-top:1rem}
+  .letter aside{position:static}
+  .stages{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:2.4rem}
+  .stages::before{display:none}
+  .stage .rise{height:110px;border-left:10px solid var(--rule)}
+  .stage:nth-child(4) .rise span{margin-bottom:60px}.stage:nth-child(3) .rise span{margin-bottom:46px}
+  .who{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:1.6rem}
+  .who div:nth-child(3){padding-left:0;border-left:0}
+  .foot-top{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width: 680px){
+  .compare,.steps{grid-template-columns:minmax(0,1fr)}
+  .compare > div{padding:1.6rem 0}
+  .compare > div + div{padding-left:0;border-left:0;border-top:1px solid var(--band-line)}
+  .steps li,.steps li + li{padding:1.5rem 0;border-left:0}
+  .steps li + li{border-top:1px solid var(--line)}
+  .stages{grid-template-columns:minmax(0,1fr)}
+  .stage{grid-template-columns:96px minmax(0,1fr);grid-template-rows:auto}
+  .stage .rise{height:auto;min-height:96px;border-bottom:0;border-left:8px solid var(--rule);justify-content:center;align-items:center}
+  .stage .rise span{margin:0!important}
+  .stage .txt{padding:.2rem 0 0 1.1rem}
+  .who{grid-template-columns:minmax(0,1fr)}
+  .who div,.who div + div{padding:1.2rem 0 0;border-left:0}
+  .owners{grid-template-columns:minmax(0,1fr)}
+  .nav .btn{padding:.6rem .8rem;font-size:.9rem}
+  .brand{width:112px}
+  .foot-top{grid-template-columns:minmax(0,1fr)}
+  .portrait figcaption{max-width:88%}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Lifinity home"><span class="logo-light"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 746.0 158.9"><g transform="translate(0.0,122.5)"><path d="M29 22.5H0V-122.5H29V-6.5H145V22.5H29Z" fill="#0F3D36"/><path d="M80.55 -45.72C80.55 -38.91 75.03 -33.4 68.22 -33.4C61.41 -33.4 55.9 -38.91 55.9 -45.72C55.9 -52.53 61.41 -58.05 68.22 -58.05C75.03 -58.05 80.55 -52.53 80.55 -45.72Z" fill="#B8693C"/><path d="M110.1 -72.38C110.1 -63.97 103.29 -57.15 94.88 -57.15C86.47 -57.15 79.65 -63.97 79.65 -72.38C79.65 -80.79 86.47 -87.6 94.88 -87.6C103.29 -87.6 110.1 -80.79 110.1 -72.38Z" fill="#B8693C"/><path d="M145 -103.65C145 -93.24 136.56 -84.8 126.15 -84.8C115.74 -84.8 107.3 -93.24 107.3 -103.65C107.3 -114.06 115.74 -122.5 126.15 -122.5C136.56 -122.5 145 -114.06 145 -103.65Z" fill="#B8693C"/><path d="M469.03 0V-2.42L478.88 -7.27V-53.03L469.48 -59.85V-61.36L493.42 -70.3H494.94L496.3 -59.09H497.06Q502.67 -64.55 507.89 -67.42Q513.12 -70.3 519.79 -70.3Q528.88 -70.3 534.71 -65.68Q540.55 -61.06 540.55 -51.97V-7.27L550.39 -2.42V0H514.03V-2.42L522.97 -7.27V-45.45Q522.97 -51.21 519.41 -54.32Q515.85 -57.42 510.39 -57.42Q506.91 -57.42 502.97 -56.21Q499.03 -55 496.45 -52.88V-7.27L505.39 -2.42V0H469.03ZM209.03 0V-2.42L221.61 -8.64V-91.36L209.03 -97.58V-100H254.79V-97.58L240.55 -91.36V-8.33H275.39L286.91 -35.61H289.33V0H209.03ZM664.33 -68.79H703.88V-66.36L693.27 -61.82V-61.21L711.45 -22.58H712.21L726.76 -60.45V-61.21L716.76 -66.36V-68.79H746V-66.36L735.09 -61.21L702.52 18.03Q699.48 25.15 696.68 29.17Q693.88 33.18 690.47 34.77Q687.06 36.36 682.52 36.36Q678.88 36.36 677.59 35.23Q676.3 34.09 676.3 30.15V22.12H691.91Q694.48 18.94 696.76 14.47Q699.03 10 702.67 1.52L703.27 -0.15L674.03 -61.97L664.33 -66.36V-68.79ZM360.24 0V-2.42L370.09 -7.27V-61.82H358.42V-68.79H370.09V-72.88Q370.09 -79.09 373.42 -86.14Q376.76 -93.18 382.36 -99.39Q387.97 -105.61 394.71 -109.55Q401.45 -113.48 408.27 -113.48Q408.82 -113.48 409.33 -113.46V-99.23L395.09 -102.88Q391.61 -99.7 389.64 -93.26Q387.67 -86.82 387.67 -77.27V-68.79H406.45V-61.82H387.67V-7.12L398.88 -2.42V0H360.24ZM642.21 1.52Q634.03 1.52 628.5 -2.42Q622.97 -6.36 622.97 -13.48V-61.82H611.45V-63.33L625.09 -68.79L638.42 -85.45H640.55V-68.79H661.15V-61.82H640.55V-16.82Q640.55 -13.03 643.95 -11.14Q647.36 -9.24 651.91 -9.24Q654.79 -9.24 657.14 -9.55Q659.48 -9.85 661.45 -10.3L661.91 -10.15V-8.03Q659.79 -4.39 654.56 -1.44Q649.33 1.52 642.21 1.52ZM307.67 0V-2.42L317.52 -7.27V-53.03L308.12 -60.3V-61.97L333.58 -70.3H335.09V-7.27L344.33 -2.42V0H307.67ZM417.36 0V-2.42L427.21 -7.27V-53.03L417.82 -60.3V-61.97L443.27 -70.3H444.79V-7.27L454.03 -2.42V0H417.36ZM563.58 0V-2.42L573.42 -7.27V-53.03L564.03 -60.3V-61.97L589.48 -70.3H591V-7.27L600.24 -2.42V0H563.58Z" fill="#0F3D36"/><path d="M336.77 -96.74C336.77 -90.76 331.91 -85.9 325.92 -85.9C319.94 -85.9 315.08 -90.76 315.08 -96.74C315.08 -102.73 319.94 -107.58 325.92 -107.58C331.91 -107.58 336.77 -102.73 336.77 -96.74Z" fill="#B8693C"/><path d="M446.46 -96.74C446.46 -90.76 441.61 -85.9 435.62 -85.9C429.63 -85.9 424.78 -90.76 424.78 -96.74C424.78 -102.73 429.63 -107.58 435.62 -107.58C441.61 -107.58 446.46 -102.73 446.46 -96.74Z" fill="#B8693C"/><path d="M592.67 -96.74C592.67 -90.76 587.82 -85.9 581.83 -85.9C575.85 -85.9 570.99 -90.76 570.99 -96.74C570.99 -102.73 575.85 -107.58 581.83 -107.58C587.82 -107.58 592.67 -102.73 592.67 -96.74Z" fill="#B8693C"/></g></svg></span><span class="logo-dark"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 746.0 158.9"><g transform="translate(0.0,122.5)"><path d="M29 22.5H0V-122.5H29V-6.5H145V22.5H29Z" fill="#EEEFEA"/><path d="M80.55 -45.72C80.55 -38.91 75.03 -33.4 68.22 -33.4C61.41 -33.4 55.9 -38.91 55.9 -45.72C55.9 -52.53 61.41 -58.05 68.22 -58.05C75.03 -58.05 80.55 -52.53 80.55 -45.72Z" fill="#B8693C"/><path d="M110.1 -72.38C110.1 -63.97 103.29 -57.15 94.88 -57.15C86.47 -57.15 79.65 -63.97 79.65 -72.38C79.65 -80.79 86.47 -87.6 94.88 -87.6C103.29 -87.6 110.1 -80.79 110.1 -72.38Z" fill="#B8693C"/><path d="M145 -103.65C145 -93.24 136.56 -84.8 126.15 -84.8C115.74 -84.8 107.3 -93.24 107.3 -103.65C107.3 -114.06 115.74 -122.5 126.15 -122.5C136.56 -122.5 145 -114.06 145 -103.65Z" fill="#B8693C"/><path d="M469.03 0V-2.42L478.88 -7.27V-53.03L469.48 -59.85V-61.36L493.42 -70.3H494.94L496.3 -59.09H497.06Q502.67 -64.55 507.89 -67.42Q513.12 -70.3 519.79 -70.3Q528.88 -70.3 534.71 -65.68Q540.55 -61.06 540.55 -51.97V-7.27L550.39 -2.42V0H514.03V-2.42L522.97 -7.27V-45.45Q522.97 -51.21 519.41 -54.32Q515.85 -57.42 510.39 -57.42Q506.91 -57.42 502.97 -56.21Q499.03 -55 496.45 -52.88V-7.27L505.39 -2.42V0H469.03ZM209.03 0V-2.42L221.61 -8.64V-91.36L209.03 -97.58V-100H254.79V-97.58L240.55 -91.36V-8.33H275.39L286.91 -35.61H289.33V0H209.03ZM664.33 -68.79H703.88V-66.36L693.27 -61.82V-61.21L711.45 -22.58H712.21L726.76 -60.45V-61.21L716.76 -66.36V-68.79H746V-66.36L735.09 -61.21L702.52 18.03Q699.48 25.15 696.68 29.17Q693.88 33.18 690.47 34.77Q687.06 36.36 682.52 36.36Q678.88 36.36 677.59 35.23Q676.3 34.09 676.3 30.15V22.12H691.91Q694.48 18.94 696.76 14.47Q699.03 10 702.67 1.52L703.27 -0.15L674.03 -61.97L664.33 -66.36V-68.79ZM360.24 0V-2.42L370.09 -7.27V-61.82H358.42V-68.79H370.09V-72.88Q370.09 -79.09 373.42 -86.14Q376.76 -93.18 382.36 -99.39Q387.97 -105.61 394.71 -109.55Q401.45 -113.48 408.27 -113.48Q408.82 -113.48 409.33 -113.46V-99.23L395.09 -102.88Q391.61 -99.7 389.64 -93.26Q387.67 -86.82 387.67 -77.27V-68.79H406.45V-61.82H387.67V-7.12L398.88 -2.42V0H360.24ZM642.21 1.52Q634.03 1.52 628.5 -2.42Q622.97 -6.36 622.97 -13.48V-61.82H611.45V-63.33L625.09 -68.79L638.42 -85.45H640.55V-68.79H661.15V-61.82H640.55V-16.82Q640.55 -13.03 643.95 -11.14Q647.36 -9.24 651.91 -9.24Q654.79 -9.24 657.14 -9.55Q659.48 -9.85 661.45 -10.3L661.91 -10.15V-8.03Q659.79 -4.39 654.56 -1.44Q649.33 1.52 642.21 1.52ZM307.67 0V-2.42L317.52 -7.27V-53.03L308.12 -60.3V-61.97L333.58 -70.3H335.09V-7.27L344.33 -2.42V0H307.67ZM417.36 0V-2.42L427.21 -7.27V-53.03L417.82 -60.3V-61.97L443.27 -70.3H444.79V-7.27L454.03 -2.42V0H417.36ZM563.58 0V-2.42L573.42 -7.27V-53.03L564.03 -60.3V-61.97L589.48 -70.3H591V-7.27L600.24 -2.42V0H563.58Z" fill="#EEEFEA"/><path d="M336.77 -96.74C336.77 -90.76 331.91 -85.9 325.92 -85.9C319.94 -85.9 315.08 -90.76 315.08 -96.74C315.08 -102.73 319.94 -107.58 325.92 -107.58C331.91 -107.58 336.77 -102.73 336.77 -96.74Z" fill="#B8693C"/><path d="M446.46 -96.74C446.46 -90.76 441.61 -85.9 435.62 -85.9C429.63 -85.9 424.78 -90.76 424.78 -96.74C424.78 -102.73 429.63 -107.58 435.62 -107.58C441.61 -107.58 446.46 -102.73 446.46 -96.74Z" fill="#B8693C"/><path d="M592.67 -96.74C592.67 -90.76 587.82 -85.9 581.83 -85.9C575.85 -85.9 570.99 -90.76 570.99 -96.74C570.99 -102.73 575.85 -107.58 581.83 -107.58C587.82 -107.58 592.67 -102.73 592.67 -96.74Z" fill="#B8693C"/></g></svg></span></a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#plan">The plan</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul></nav>
+    <a class="btn btn-primary" href="https://scheduler.zoom.us/f/1klh9gol" target="_blank" rel="noopener">Book a call</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Lifinity Financial Services · Halifax, NS</span>
+        <h1 id="hero-title">Get a plan before you get&nbsp;a&nbsp;policy.</h1>
+        <p class="lede">I help families and business owners protect what they have, build for retirement and pass on what they've built. It starts with a 45-minute discovery call, and <strong>the first thing I tell you is how I'm paid.</strong></p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://scheduler.zoom.us/f/1klh9gol" target="_blank" rel="noopener">Book a discovery call <span class="arr" aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn-quiet" href="#how">See how it works</a>
+        </div>
+        <ul class="facts">
+          <li><b>5 provinces</b>NS · ON · AB · BC · SK</li>
+          <li><b>RRA<sup>®</sup></b>Registered Retirement Analyst</li>
+          <li><b>14,000+</b>follow @gmontalks</li>
+        </ul>
+      </div>
+      <figure class="portrait">
+        <svg class="mark-dots" viewBox="0 0 58 58" aria-hidden="true"><circle cx="12" cy="46" r="6" fill="var(--accent)"/><circle cx="27" cy="31" r="8" fill="var(--accent)"/><circle cx="45" cy="13" r="11" fill="var(--accent)"/></svg>
+        <div class="panel"><img src="assets/gmon-portrait.webp" width="768" height="1013" alt="G Mon, smiling, in a charcoal suit and burgundy tie"></div>
+        <figcaption><b>G Mon (Anandakrishnan Gopalakrishnan), RRA<sup>®</sup></b><span>Financial Advisor, Lifinity Financial Services Inc.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band sec" aria-labelledby="compare-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Two ways to buy insurance</span>
+        <h2 id="compare-title">Most people are shown a product. You'll be shown a plan.</h2>
+      </div>
+      <div class="compare">
+        <div>
+          <h3>Starting with a product</h3>
+          <p class="big">One policy, picked before anyone asks about your life.</p>
+          <ul>
+            <li>The recommendation arrives in the first meeting</li>
+            <li>Questions about your goals come after the pitch</li>
+            <li>How the advisor is paid comes up late, or not at all</li>
+            <li>Coverage that fits today, not the next chapter</li>
+          </ul>
+        </div>
+        <div class="ours">
+          <h3>Starting with a plan</h3>
+          <p class="big">Your situation first. Recommendations second.</p>
+          <ul>
+            <li>Disclosure first: my licensing, the companies I work with, how I'm paid</li>
+            <li>We map your family, income, debts and goals before any product</li>
+            <li>Recommendations come at a second meeting, with the reasons in writing</li>
+            <li>Reviewed when life changes: a baby, a house, a business, retirement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>How it works</span>
+        <h2 id="how-title">Two meetings. No pressure in between.</h2>
+        <p class="lede">You'll always know what happens next, and you decide in your own time.</p>
+      </div>
+      <ol class="steps">
+        <li><span class="n">STEP 1</span><h3>Answer a few quick questions</h3><p>It takes about 30 seconds. I find out where you live and what you'd like to talk about, so I come prepared.</p><span class="tag">30 seconds · online</span></li>
+        <li><span class="n">STEP 2</span><h3>Discovery call on Zoom</h3><p>I open with my disclosure, then we go through your situation together. Join from a laptop or desktop so we can look at numbers on screen.</p><span class="tag">45 minutes · Zoom</span></li>
+        <li><span class="n">STEP 3</span><h3>Your recommendations</h3><p>At a second meeting I walk you through what I recommend and why. Nothing is decided on the spot.</p><span class="tag">Second meeting · your pace</span></li>
+      </ol>
+      <div class="after-steps">
+        <a class="btn btn-primary" href="https://scheduler.zoom.us/f/1klh9gol" target="_blank" rel="noopener">Start with step 1 <span class="arr" aria-hidden="true">&rarr;</span></a>
+        <span class="note">Booking slots open up to 14 days ahead.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="plan sec" id="plan" aria-labelledby="plan-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>The Lifinity plan</span>
+        <h2 id="plan-title">Planning for every chapter of life.</h2>
+        <p class="lede">Every plan follows the same four stages. Where you start depends on where you are today.</p>
+      </div>
+      <ol class="stages">
+        <li class="stage"><div class="rise" aria-hidden="true"><span></span></div><div class="txt"><span class="n">STAGE 1</span><h3>Protect</h3><p>Life, critical illness and disability insurance, so your family's plan survives a bad day.</p></div></li>
+        <li class="stage"><div class="rise" aria-hidden="true"><span></span></div><div class="txt"><span class="n">STAGE 2</span><h3>Accumulate</h3><p>Savings plans that keep working: TFSA, RRSP, FHSA and segregated funds.</p></div></li>
+        <li class="stage"><div class="rise" aria-hidden="true"><span></span></div><div class="txt"><span class="n">STAGE 3</span><h3>Utilize</h3><p>Turning what you've saved into retirement income you can count on.</p></div></li>
+        <li class="stage"><div class="rise" aria-hidden="true"><span></span></div><div class="txt"><span class="n">STAGE 4</span><h3>Transfer</h3><p>Leaving more to the people you love, with insurance to help cover estate costs.</p></div></li>
+      </ol>
+      <div class="owners">
+        <h3>Own a business?</h3>
+        <p>Corporate-owned insurance, key person cover and group benefits for your team, planned alongside your personal goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="who-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Who I work with</span>
+        <h2 id="who-title">People at a turning point.</h2>
+      </div>
+      <div class="who">
+        <div><h3>Young families</h3><p>A new baby or a new mortgage, and a family that depends on your income.</p></div>
+        <div><h3>Newcomers to Canada</h3><p>Building a life here and learning how Canadian insurance and savings plans work.</p></div>
+        <div><h3>Business owners</h3><p>Incorporated professionals and owners protecting the business and the people in it.</p></div>
+        <div><h3>Pre-retirees</h3><p>Ten years or less from retirement and wanting income that lasts.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band sec letter" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <aside>
+        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Why I do this</span>
+        <h2 id="about-title" class="name">A note from G Mon</h2>
+        <div class="avatar"><img src="assets/gmon-portrait.webp" width="768" height="1013" alt="" loading="lazy"></div>
+      </aside>
+      <div>
+        <blockquote>
+          <p>I came to Canada as a student. Soon after I finished my studies, an accident showed me how quickly a peaceful life can change, and how much it matters to have a plan before you need one.</p>
+          <p>I've worked in the financial industry since 2021. In December 2025 I left a senior buyer role in Nova Scotia's health system to do this full time, because I wanted to give people the advice I wish I'd had.</p>
+          <p>I built Lifinity on one rule: your interest comes before mine. That's why I tell you how I'm paid before you tell me anything about your money.</p>
+        </blockquote>
+        <p class="sign">G Mon</p>
+        <p class="meaning"><b>Why "Lifinity"?</b> Life plus infinity. Good planning doesn't stop at one stage of life. It protects your family today and keeps working for the next generation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-grid">
+      <div class="sec-head">
+        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Questions</span>
+        <h2 id="faq-title">What people ask before they book.</h2>
+        <p class="lede">Something else on your mind? Email <a href="mailto:gmon@lifinity.ca">gmon@lifinity.ca</a>.</p>
+      </div>
+      <div class="faq">
+        <details><summary>Do I have to buy anything?</summary><p>No. The discovery call is for understanding your situation. You'll only see recommendations at a second meeting, and the decision is always yours.</p></details>
+        <details><summary>How are you paid?</summary><p>Mostly through commissions from the insurance companies whose products I recommend. I explain exactly how it works, including any conflicts of interest, at the start of our first call.</p></details>
+        <details><summary>Which provinces do you work in?</summary><p>Nova Scotia, Ontario, Alberta, British Columbia and Saskatchewan. If you live somewhere else, I can't advise you yet.</p></details>
+        <details><summary>Why a laptop or desktop?</summary><p>We look at numbers and illustrations together on screen. A phone screen is too small to follow along comfortably.</p></details>
+        <details><summary>What should I have ready?</summary><p>Nothing for the first call. If you already have policies or a group benefits booklet from work, keep them nearby.</p></details>
+        <details><summary>Do you work with newcomers?</summary><p>Yes. I came to Canada as a student myself. Some insurance options depend on your residency status, and we'll check that together.</p></details>
+        <details><summary>Can you manage my investment portfolio?</summary><p>No. My licence covers life and health insurance, which includes segregated funds. I don't sell stocks, ETFs or mutual funds.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band sec final" aria-labelledby="final-title">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Your next step</span>
+        <h2 id="final-title" style="margin-top:1rem">Your plan should outlive you. That's the point.</h2>
+        <p class="lede">Book a 45-minute discovery call. Disclosure first, recommendations second, decisions always yours.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="https://scheduler.zoom.us/f/1klh9gol" target="_blank" rel="noopener">Book a discovery call <span class="arr" aria-hidden="true">&rarr;</span></a></div>
+      </div>
+      <div class="news">
+        <h3>Not ready to book?</h3>
+        <p>Get one plain-English money note a month: insurance, RRSP and TFSA season, and what's changing in Canada.</p>
+        <form id="news-form" data-action="REPLACE_WITH_BREVO_FORM_ACTION" novalidate>
+          <label for="news-email">Email address</label>
+          <input id="news-email" name="EMAIL" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <small>By subscribing you agree to receive Lifinity's monthly email. Unsubscribe any time.</small>
+        <p class="msg" id="news-msg" role="status" hidden></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <span class="brand"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 746.0 158.9"><g transform="translate(0.0,122.5)"><path d="M29 22.5H0V-122.5H29V-6.5H145V22.5H29Z" fill="#EEEFEA"/><path d="M80.55 -45.72C80.55 -38.91 75.03 -33.4 68.22 -33.4C61.41 -33.4 55.9 -38.91 55.9 -45.72C55.9 -52.53 61.41 -58.05 68.22 -58.05C75.03 -58.05 80.55 -52.53 80.55 -45.72Z" fill="#B8693C"/><path d="M110.1 -72.38C110.1 -63.97 103.29 -57.15 94.88 -57.15C86.47 -57.15 79.65 -63.97 79.65 -72.38C79.65 -80.79 86.47 -87.6 94.88 -87.6C103.29 -87.6 110.1 -80.79 110.1 -72.38Z" fill="#B8693C"/><path d="M145 -103.65C145 -93.24 136.56 -84.8 126.15 -84.8C115.74 -84.8 107.3 -93.24 107.3 -103.65C107.3 -114.06 115.74 -122.5 126.15 -122.5C136.56 -122.5 145 -114.06 145 -103.65Z" fill="#B8693C"/><path d="M469.03 0V-2.42L478.88 -7.27V-53.03L469.48 -59.85V-61.36L493.42 -70.3H494.94L496.3 -59.09H497.06Q502.67 -64.55 507.89 -67.42Q513.12 -70.3 519.79 -70.3Q528.88 -70.3 534.71 -65.68Q540.55 -61.06 540.55 -51.97V-7.27L550.39 -2.42V0H514.03V-2.42L522.97 -7.27V-45.45Q522.97 -51.21 519.41 -54.32Q515.85 -57.42 510.39 -57.42Q506.91 -57.42 502.97 -56.21Q499.03 -55 496.45 -52.88V-7.27L505.39 -2.42V0H469.03ZM209.03 0V-2.42L221.61 -8.64V-91.36L209.03 -97.58V-100H254.79V-97.58L240.55 -91.36V-8.33H275.39L286.91 -35.61H289.33V0H209.03ZM664.33 -68.79H703.88V-66.36L693.27 -61.82V-61.21L711.45 -22.58H712.21L726.76 -60.45V-61.21L716.76 -66.36V-68.79H746V-66.36L735.09 -61.21L702.52 18.03Q699.48 25.15 696.68 29.17Q693.88 33.18 690.47 34.77Q687.06 36.36 682.52 36.36Q678.88 36.36 677.59 35.23Q676.3 34.09 676.3 30.15V22.12H691.91Q694.48 18.94 696.76 14.47Q699.03 10 702.67 1.52L703.27 -0.15L674.03 -61.97L664.33 -66.36V-68.79ZM360.24 0V-2.42L370.09 -7.27V-61.82H358.42V-68.79H370.09V-72.88Q370.09 -79.09 373.42 -86.14Q376.76 -93.18 382.36 -99.39Q387.97 -105.61 394.71 -109.55Q401.45 -113.48 408.27 -113.48Q408.82 -113.48 409.33 -113.46V-99.23L395.09 -102.88Q391.61 -99.7 389.64 -93.26Q387.67 -86.82 387.67 -77.27V-68.79H406.45V-61.82H387.67V-7.12L398.88 -2.42V0H360.24ZM642.21 1.52Q634.03 1.52 628.5 -2.42Q622.97 -6.36 622.97 -13.48V-61.82H611.45V-63.33L625.09 -68.79L638.42 -85.45H640.55V-68.79H661.15V-61.82H640.55V-16.82Q640.55 -13.03 643.95 -11.14Q647.36 -9.24 651.91 -9.24Q654.79 -9.24 657.14 -9.55Q659.48 -9.85 661.45 -10.3L661.91 -10.15V-8.03Q659.79 -4.39 654.56 -1.44Q649.33 1.52 642.21 1.52ZM307.67 0V-2.42L317.52 -7.27V-53.03L308.12 -60.3V-61.97L333.58 -70.3H335.09V-7.27L344.33 -2.42V0H307.67ZM417.36 0V-2.42L427.21 -7.27V-53.03L417.82 -60.3V-61.97L443.27 -70.3H444.79V-7.27L454.03 -2.42V0H417.36ZM563.58 0V-2.42L573.42 -7.27V-53.03L564.03 -60.3V-61.97L589.48 -70.3H591V-7.27L600.24 -2.42V0H563.58Z" fill="#EEEFEA"/><path d="M336.77 -96.74C336.77 -90.76 331.91 -85.9 325.92 -85.9C319.94 -85.9 315.08 -90.76 315.08 -96.74C315.08 -102.73 319.94 -107.58 325.92 -107.58C331.91 -107.58 336.77 -102.73 336.77 -96.74Z" fill="#B8693C"/><path d="M446.46 -96.74C446.46 -90.76 441.61 -85.9 435.62 -85.9C429.63 -85.9 424.78 -90.76 424.78 -96.74C424.78 -102.73 429.63 -107.58 435.62 -107.58C441.61 -107.58 446.46 -102.73 446.46 -96.74Z" fill="#B8693C"/><path d="M592.67 -96.74C592.67 -90.76 587.82 -85.9 581.83 -85.9C575.85 -85.9 570.99 -90.76 570.99 -96.74C570.99 -102.73 575.85 -107.58 581.83 -107.58C587.82 -107.58 592.67 -102.73 592.67 -96.74Z" fill="#B8693C"/></g></svg></span>
+        <p style="margin-top:1rem;max-width:30ch">Planning for every chapter of life.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="tel:+19025370036">+1 (902) 537-0036</a></p>
+        <p><a href="mailto:gmon@lifinity.ca">gmon@lifinity.ca</a></p>
+      </div>
+      <div>
+        <h4>Office</h4>
+        <p>63 Farnham Gate Road, Unit 104<br>Halifax, NS</p>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <p><a href="https://www.instagram.com/gmontalks" target="_blank" rel="noopener">Instagram @gmontalks</a></p>
+        <p><a href="https://scheduler.zoom.us/f/1klh9gol" target="_blank" rel="noopener">Book a call</a></p>
+      </div>
+    </div>
+    <div class="legal">
+      <p>Anandakrishnan Gopalakrishnan is licensed to sell life and accident &amp; sickness insurance in Nova Scotia, Ontario, Alberta, British Columbia and Saskatchewan. The information on this site is general and isn't a recommendation for your situation.</p>
+      <div class="row"><span>&copy; 2026 Lifinity Financial Services Inc.</span><span><a href="privacy.html">Privacy</a></span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form=document.getElementById('news-form'), msg=document.getElementById('news-msg');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    var email=document.getElementById('news-email'), action=form.getAttribute('data-action')||'';
+    if(!email.value || !email.checkValidity()){ e.preventDefault(); msg.hidden=false; msg.textContent='Please enter a valid email address.'; email.focus(); return; }
+    if(action.indexOf('http')!==0){ e.preventDefault(); msg.hidden=false; msg.textContent='Signup isn’t connected yet. Email gmon@lifinity.ca and I’ll add you.'; return; }
+    e.preventDefault();
+    var data=new FormData(form);
+    fetch(action,{method:'POST',body:data,mode:'no-cors'}).then(function(){ msg.hidden=false; msg.textContent='You’re on the list. Check your inbox to confirm.'; form.reset(); })
+      .catch(function(){ msg.hidden=false; msg.textContent='Something went wrong. Email gmon@lifinity.ca and I’ll add you.'; });
+  });
+})();
+</script>
+
+</body>
+</html>
