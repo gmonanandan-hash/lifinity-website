@@ -108,6 +108,18 @@ p{margin:0}
 .portrait figcaption{position:absolute;z-index:3;right:14px;bottom:14px;background:var(--band);color:var(--band-ink);padding:.7rem .9rem;border-radius:var(--radius);max-width:78%}
 .portrait figcaption b{display:block;font-family:var(--f-display);font-weight:500;font-size:1.08rem;line-height:1.25}
 .portrait figcaption span{font-size:.82rem;color:var(--band-muted)}
+.idea{position:relative;background:var(--band);color:var(--band-ink);border-radius:var(--radius);aspect-ratio:4/5;overflow:hidden;padding:clamp(1.6rem,3vw,2.4rem);display:flex;flex-direction:column;gap:.9rem;min-width:0;margin:0}
+.idea .eq{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--band-muted)}
+.idea .eq b{color:var(--accent);font-weight:500}
+.idea .say{font-family:var(--f-display);font-weight:400;font-size:clamp(1.55rem,1.15rem + 1.3vw,2.25rem);line-height:1.15;color:var(--band-ink);max-width:13ch}
+.idea .corner{position:absolute;left:13%;bottom:13%;width:56%;height:44%;border-left:clamp(14px,2vw,22px) solid var(--band-ink);border-bottom:clamp(14px,2vw,22px) solid var(--band-ink)}
+.idea .mark-dots{position:absolute;left:34%;bottom:36%;width:44%;height:auto}
+.idea .chapters{position:absolute;left:13%;right:9%;bottom:5.5%;display:flex;justify-content:space-between;gap:.5rem;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--band-muted)}
+.about-portrait{margin-top:1.4rem}
+.letter .portrait::before{border-color:var(--band-ink)}
+.letter .facts{border-top-color:var(--band-line);margin-top:1.8rem}
+.letter .facts li{color:var(--band-muted)}
+.letter .facts b{color:var(--band-ink)}
 @media (prefers-reduced-motion: no-preference){
   .mark-dots circle{transform-box:fill-box;transform-origin:center;animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
   .mark-dots circle:nth-child(2){animation-delay:.12s}.mark-dots circle:nth-child(3){animation-delay:.24s}
@@ -230,6 +242,7 @@ footer .wrap{display:grid;gap:2.2rem}
   .nav ul{display:none}
   .hero .wrap,.letter .wrap,.faq-grid,.final .wrap{grid-template-columns:minmax(0,1fr)}
   .portrait{max-width:420px;margin-top:1rem}
+  .idea{aspect-ratio:auto;min-height:420px;max-width:520px}
   .letter aside{position:static}
   .stages{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:2.4rem}
   .stages::before{display:none}
@@ -271,8 +284,8 @@ footer .wrap{display:grid;gap:2.2rem}
     <nav aria-label="Main"><ul>
       <li><a href="#how">How it works</a></li>
       <li><a href="#plan">The plan</a></li>
-      <li><a href="#about">About</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="#about">Your advisor</a></li>
     </ul></nav>
     <a class="btn btn-primary" href="https://scheduler.zoom.us/f/1klh9gol" target="_blank" rel="noopener">Book a call</a>
   </div>
@@ -284,21 +297,23 @@ footer .wrap{display:grid;gap:2.2rem}
       <div class="hero-copy">
         <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Lifinity Financial Services · Halifax, NS</span>
         <h1 id="hero-title">Get a plan before you get&nbsp;a&nbsp;policy.</h1>
-        <p class="lede">I help families and business owners protect what they have, build for retirement and pass on what they've built. It starts with a 45-minute discovery call, and <strong>the first thing I tell you is how I'm paid.</strong></p>
+        <p class="lede">Lifinity helps families and business owners protect what they have, build for retirement and pass on what they've built. Every plan starts with a 45-minute discovery call, and <strong>the first thing you hear is how your advisor is paid.</strong></p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://scheduler.zoom.us/f/1klh9gol" target="_blank" rel="noopener">Book a discovery call <span class="arr" aria-hidden="true">&rarr;</span></a>
           <a class="btn btn-quiet" href="#how">See how it works</a>
         </div>
         <ul class="facts">
           <li><b>5 provinces</b>NS · ON · AB · BC · SK</li>
-          <li><b>RRA<sup>®</sup></b>Registered Retirement Analyst</li>
-          <li><b>14,000+</b>follow @gmontalks</li>
+          <li><b>2 meetings</b>before any recommendation</li>
+          <li><b>4 stages</b>from Protect to Transfer</li>
         </ul>
       </div>
-      <figure class="portrait">
-        <svg class="mark-dots" viewBox="0 0 58 58" aria-hidden="true"><circle cx="12" cy="46" r="6" fill="var(--accent)"/><circle cx="27" cy="31" r="8" fill="var(--accent)"/><circle cx="45" cy="13" r="11" fill="var(--accent)"/></svg>
-        <div class="panel"><img src="gmon-portrait.webp" width="768" height="1013" alt="G Mon, smiling, in a charcoal suit and burgundy tie"></div>
-        <figcaption><b>G Mon (Anandakrishnan Gopalakrishnan), RRA<sup>®</sup></b><span>Financial Advisor, Lifinity Financial Services Inc.</span></figcaption>
+      <figure class="idea" aria-label="Lifinity means life plus infinity">
+        <p class="eq">Life + infinity = <b>Lifinity</b></p>
+        <p class="say">Planning that lasts longer than you do.</p>
+        <span class="corner" aria-hidden="true"></span>
+        <svg class="mark-dots" viewBox="0 0 120 100" aria-hidden="true"><circle cx="14" cy="86" r="11" fill="var(--accent)"/><circle cx="52" cy="54" r="15" fill="var(--accent)"/><circle cx="98" cy="18" r="19" fill="var(--accent)"/></svg>
+        <span class="chapters" aria-hidden="true"><span>Protect</span><span>Accumulate</span><span>Utilize</span><span>Transfer</span></span>
       </figure>
     </div>
   </section>
@@ -324,7 +339,7 @@ footer .wrap{display:grid;gap:2.2rem}
           <h3>Starting with a plan</h3>
           <p class="big">Your situation first. Recommendations second.</p>
           <ul>
-            <li>Disclosure first: my licensing, the companies I work with, how I'm paid</li>
+            <li>Disclosure first: licensing, the insurers involved and how your advisor is paid</li>
             <li>We map your family, income, debts and goals before any product</li>
             <li>Recommendations come at a second meeting, with the reasons in writing</li>
             <li>Reviewed when life changes: a baby, a house, a business, retirement</li>
@@ -342,9 +357,9 @@ footer .wrap{display:grid;gap:2.2rem}
         <p class="lede">You'll always know what happens next, and you decide in your own time.</p>
       </div>
       <ol class="steps">
-        <li><span class="n">STEP 1</span><h3>Answer a few quick questions</h3><p>It takes about 30 seconds. I find out where you live and what you'd like to talk about, so I come prepared.</p><span class="tag">30 seconds · online</span></li>
-        <li><span class="n">STEP 2</span><h3>Discovery call on Zoom</h3><p>I open with my disclosure, then we go through your situation together. Join from a laptop or desktop so we can look at numbers on screen.</p><span class="tag">45 minutes · Zoom</span></li>
-        <li><span class="n">STEP 3</span><h3>Your recommendations</h3><p>At a second meeting I walk you through what I recommend and why. Nothing is decided on the spot.</p><span class="tag">Second meeting · your pace</span></li>
+        <li><span class="n">STEP 1</span><h3>Answer a few quick questions</h3><p>It takes about 30 seconds. It tells your advisor where you live and what you'd like to talk about, so your first call starts prepared.</p><span class="tag">30 seconds · online</span></li>
+        <li><span class="n">STEP 2</span><h3>Discovery call on Zoom</h3><p>It opens with your advisor's disclosure, then you go through your situation together. Join from a laptop or desktop so you can look at the numbers on screen.</p><span class="tag">45 minutes · Zoom</span></li>
+        <li><span class="n">STEP 3</span><h3>Your recommendations</h3><p>At a second meeting you see what's recommended and why. Nothing is decided on the spot.</p><span class="tag">Second meeting · your pace</span></li>
       </ol>
       <div class="after-steps">
         <a class="btn btn-primary" href="https://scheduler.zoom.us/f/1klh9gol" target="_blank" rel="noopener">Start with step 1 <span class="arr" aria-hidden="true">&rarr;</span></a>
@@ -376,7 +391,7 @@ footer .wrap{display:grid;gap:2.2rem}
   <section class="sec" aria-labelledby="who-title">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Who I work with</span>
+        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Who Lifinity is for</span>
         <h2 id="who-title">People at a turning point.</h2>
       </div>
       <div class="who">
@@ -388,24 +403,6 @@ footer .wrap{display:grid;gap:2.2rem}
     </div>
   </section>
 
-  <section class="band sec letter" id="about" aria-labelledby="about-title">
-    <div class="wrap">
-      <aside>
-        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Why I do this</span>
-        <h2 id="about-title" class="name">A note from G Mon</h2>
-        <div class="avatar"><img src="gmon-portrait.webp" width="768" height="1013" alt="" loading="lazy"></div>
-      </aside>
-      <div>
-        <blockquote>
-          <p>I came to Canada as a student. Soon after I finished my studies, an accident showed me how quickly a peaceful life can change, and how much it matters to have a plan before you need one.</p>
-          <p>I've worked in the financial industry since 2021. In December 2025 I left a senior buyer role in Nova Scotia's health system to do this full time, because I wanted to give people the advice I wish I'd had.</p>
-          <p>I built Lifinity on one rule: your interest comes before mine. That's why I tell you how I'm paid before you tell me anything about your money.</p>
-        </blockquote>
-        <p class="sign">G Mon</p>
-        <p class="meaning"><b>Why "Lifinity"?</b> Life plus infinity. Good planning doesn't stop at one stage of life. It protects your family today and keeps working for the next generation.</p>
-      </div>
-    </div>
-  </section>
 
   <section class="sec" id="faq" aria-labelledby="faq-title">
     <div class="wrap faq-grid">
@@ -416,17 +413,46 @@ footer .wrap{display:grid;gap:2.2rem}
       </div>
       <div class="faq">
         <details><summary>Do I have to buy anything?</summary><p>No. The discovery call is for understanding your situation. You'll only see recommendations at a second meeting, and the decision is always yours.</p></details>
-        <details><summary>How are you paid?</summary><p>Mostly through commissions from the insurance companies whose products I recommend. I explain exactly how it works, including any conflicts of interest, at the start of our first call.</p></details>
-        <details><summary>Which provinces do you work in?</summary><p>Nova Scotia, Ontario, Alberta, British Columbia and Saskatchewan. If you live somewhere else, I can't advise you yet.</p></details>
-        <details><summary>Why a laptop or desktop?</summary><p>We look at numbers and illustrations together on screen. A phone screen is too small to follow along comfortably.</p></details>
+        <details><summary>How is the advisor paid?</summary><p>Mostly through commissions from the insurance companies whose products are recommended. You hear exactly how it works, including any conflicts of interest, at the start of your first call.</p></details>
+        <details><summary>Which provinces does Lifinity serve?</summary><p>Nova Scotia, Ontario, Alberta, British Columbia and Saskatchewan. If you live somewhere else, Lifinity can't advise you yet.</p></details>
+        <details><summary>Why a laptop or desktop?</summary><p>You'll look at numbers and illustrations together on screen. A phone screen is too small to follow along comfortably.</p></details>
         <details><summary>What should I have ready?</summary><p>Nothing for the first call. If you already have policies or a group benefits booklet from work, keep them nearby.</p></details>
-        <details><summary>Do you work with newcomers?</summary><p>Yes. I came to Canada as a student myself. Some insurance options depend on your residency status, and we'll check that together.</p></details>
-        <details><summary>Can you manage my investment portfolio?</summary><p>No. My licence covers life and health insurance, which includes segregated funds. I don't sell stocks, ETFs or mutual funds.</p></details>
+        <details><summary>Is Lifinity a fit for newcomers?</summary><p>Yes. Lifinity's founder came to Canada as a student. Some insurance options depend on your residency status, and that gets checked together on your first call.</p></details>
+        <details><summary>Does Lifinity manage investment portfolios?</summary><p>No. Lifinity's advice covers life and health insurance, which includes segregated funds. Stocks, ETFs and mutual funds aren't offered.</p></details>
       </div>
     </div>
   </section>
 
-  <section class="band sec final" aria-labelledby="final-title">
+  <section class="band sec letter" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <aside>
+        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Meet your advisor</span>
+        <h2 id="about-title" class="name">Hi, I'm G Mon.</h2>
+        <div class="about-portrait">
+        <figure class="portrait">
+        <svg class="mark-dots" viewBox="0 0 58 58" aria-hidden="true"><circle cx="12" cy="46" r="6" fill="var(--accent)"/><circle cx="27" cy="31" r="8" fill="var(--accent)"/><circle cx="45" cy="13" r="11" fill="var(--accent)"/></svg>
+        <div class="panel"><img src="gmon-portrait.webp" width="768" height="1013" alt="G Mon, smiling, in a charcoal suit and burgundy tie"></div>
+        <figcaption><b>G Mon (Anandakrishnan Gopalakrishnan), RRA<sup>®</sup></b><span>Financial Advisor, Lifinity Financial Services Inc.</span></figcaption>
+      </figure>
+        </div>
+      </aside>
+      <div>
+        <blockquote>
+          <p>I came to Canada as a student. Soon after I finished my studies, an accident showed me how quickly a peaceful life can change, and how much it matters to have a plan before you need one.</p>
+          <p>I've worked in the financial industry since 2021. In December 2025 I left a senior buyer role in Nova Scotia's health system to do this full time, because I wanted to give people the advice I wish I'd had.</p>
+          <p>I built Lifinity on one rule: your interest comes before mine. That's why I tell you how I'm paid before you tell me anything about your money.</p>
+        </blockquote>
+        <p class="sign">G Mon</p>
+        <ul class="facts">
+          <li><b>RRA<sup>®</sup></b>Registered Retirement Analyst</li>
+          <li><b>5 provinces</b>Licensed in NS · ON · AB · BC · SK</li>
+          <li><b>14,000+</b>follow <a href="https://www.instagram.com/gmontalks" target="_blank" rel="noopener" style="color:inherit">@gmontalks</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec final" aria-labelledby="final-title">
     <div class="wrap">
       <div>
         <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Your next step</span>
