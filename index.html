@@ -123,13 +123,13 @@ section{scroll-margin-top:84px}
 .band .eyebrow{color:var(--band-muted)}
 .band .lede{color:var(--band-muted)}
 .compare-sec{background:var(--surface);border-block:1px solid var(--line)}
-.compare{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
-.compare > div{padding:2rem 2.2rem 2.2rem 0;min-width:0}
-.compare > div + div{padding-left:2.2rem;border-left:1px solid var(--line)}
+.compare{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:repeat(6,auto)}
+.compare > div{display:grid;grid-row:1 / span 6;grid-template-rows:subgrid;row-gap:0;align-content:start;padding:2rem 2.2rem 1.4rem 0;min-width:0;border-top:3px solid transparent}
+.compare > div + div{padding-left:2.2rem;padding-right:2.2rem;background:#FFFFFF;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:var(--radius)}
 .compare h3{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--muted);margin-bottom:1rem}
-.compare .big{font-family:var(--f-display);font-size:var(--s2);line-height:1.2;margin-bottom:1.4rem;color:var(--muted)}
-.compare ul{list-style:none;margin:0;padding:0;display:grid;gap:.85rem}
-.compare li{display:grid;grid-template-columns:1.4rem 1fr;gap:.6rem;align-items:start;color:var(--muted)}
+.compare .big{font-family:var(--f-display);font-size:var(--s2);line-height:1.2;margin-bottom:1.2rem;color:var(--muted)}
+.compare ul{list-style:none;margin:0;padding:0;display:contents}
+.compare li{display:grid;grid-template-columns:1.4rem 1fr;gap:.6rem;align-items:start;color:var(--muted);padding:.95rem 0;border-top:1px solid var(--line)}
 .compare li::before{content:"";width:9px;height:9px;margin-top:.55em;border:1.5px solid var(--muted);border-radius:50%}
 .compare .ours .big{color:var(--heading)}
 .compare .ours li{color:var(--ink)}
@@ -241,9 +241,13 @@ footer .wrap{display:grid;gap:2.2rem}
   .foot-top{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width: 680px){
-  .compare,.steps{grid-template-columns:minmax(0,1fr)}
-  .compare > div{padding:1.6rem 0}
-  .compare > div + div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .compare > div{padding:1.1rem .75rem .6rem 0}
+  .compare > div + div{padding:1.1rem .75rem .6rem}
+  .compare h3{font-size:.6rem;letter-spacing:.08em;line-height:1.45;margin-bottom:.6rem}
+  .compare .big{font-size:1.06rem;line-height:1.25;margin-bottom:.9rem}
+  .compare li{display:block;font-size:.88rem;line-height:1.45;padding:.8rem 0}
+  .compare li::before{display:inline-block;width:7px;height:7px;margin:0 .4rem 0 0;vertical-align:.1em}
   .steps li,.steps li + li{padding:1.5rem 0;border-left:0}
   .steps li + li{border-top:1px solid var(--line)}
   .stages{grid-template-columns:minmax(0,1fr)}
@@ -272,8 +276,6 @@ footer .wrap{display:grid;gap:2.2rem}
   .idea .chapters{font-size:.58rem;letter-spacing:.07em;left:8%;right:8%}
   .sec{padding-block:4.5rem}
   .sec-head{margin-bottom:2.2rem}
-  .compare .big{font-size:1.4rem}
-  .compare ul{gap:1rem}
   .steps li,.steps li + li{padding:1.8rem 0}
   .stages{row-gap:1.6rem}
   .who div,.who div + div{padding:1.4rem 0 .4rem}
@@ -338,17 +340,17 @@ footer .wrap{display:grid;gap:2.2rem}
         <div>
           <h3>Starting with a product</h3>
           <p class="big">One policy, picked before anyone asks about your life.</p>
-          <ul>
-            <li>The recommendation arrives in the first meeting</li>
-            <li>Questions about your goals come after the pitch</li>
+          <ul role="list">
             <li>How the advisor is paid comes up late, or not at all</li>
+            <li>Questions about your goals come after the pitch</li>
+            <li>The recommendation arrives in the first meeting</li>
             <li>Coverage that fits today, not the next chapter</li>
           </ul>
         </div>
         <div class="ours">
           <h3>Starting with a plan</h3>
           <p class="big">Your situation first. Recommendations second.</p>
-          <ul>
+          <ul role="list">
             <li>Disclosure first: licensing, the insurers involved and how your advisor is paid</li>
             <li>We map your family, income, debts and goals before any product</li>
             <li>Recommendations come at a second meeting, with the reasons in writing</li>
