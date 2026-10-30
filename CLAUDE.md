@@ -8,10 +8,11 @@ Everything else on the page supports that.
 
 ## Stack
 
-- Plain static site. No framework, no build step, no npm.
+- Plain static site. No framework, no build step, no npm. Everything sits in the repo root:
   - `index.html`: the landing page (all CSS and JS inline)
   - `privacy.html`: privacy notice
-  - `assets/`: logo SVGs, portrait, favicons, share image
+  - Images: `gmon-portrait.webp`, `lifinity-logo.svg`, `lifinity-logo-reversed.svg`, `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `og-image.png`
+  - Docs: `PLAYBOOK.md`
 - Hosted on Vercel, deployed automatically from the `main` branch.
 - DNS is on Cloudflare. Vercel records must stay **DNS only (grey cloud)**.
 - Never touch the MX, SPF, DKIM or DMARC records. Email runs through Cloudflare Email Routing (inbound) and Brevo (outbound).
@@ -32,7 +33,7 @@ Everything else on the page supports that.
 **Logo**
 
 - An L mark with three rising copper dots, plus the "Lifinity" wordmark.
-- Use the files in `assets/`. Never redraw, recolour or stretch them.
+- Use the logo files in the repo root. Never redraw, recolour or stretch them.
   - `lifinity-logo.svg`: for light backgrounds
   - `lifinity-logo-reversed.svg`: for dark backgrounds
 
@@ -70,7 +71,7 @@ Neutrals lean slightly green, for example the muted text `#55605C`. Don't use pu
 
 ## How to write copy here
 
-These rules come from the copywriting and design tutorials in `docs/PLAYBOOK.md`.
+These rules come from the copywriting and design tutorials in `PLAYBOOK.md`.
 
 1. **Lead with value, then how.** Headline = what the reader gets. Subline = how it happens and who it's for.
 2. **Harry Dry's three tests for every line:** Can I visualise it? Can I falsify it? Could nobody else say it?
