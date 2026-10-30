@@ -113,7 +113,7 @@ p{margin:0}
 @keyframes rise{from{transform:translateY(8px) scale(.85)}to{transform:none}}
 
 /* sections */
-section{scroll-margin-top:84px}
+section,#newsletter{scroll-margin-top:84px}
 .sec{padding-block:clamp(4rem,8vw,6.5rem)}
 .sec-head{display:grid;gap:1rem;max-width:760px;margin-bottom:clamp(2.2rem,4vw,3.2rem)}
 
@@ -430,7 +430,7 @@ footer .wrap{display:grid;gap:2.2rem}
         <details><summary>Why a laptop or desktop?</summary><p>You'll look at numbers and illustrations together on screen. A phone screen is too small to follow along comfortably.</p></details>
         <details><summary>What should I have ready?</summary><p>Nothing for the first call. If you already have policies or a group benefits booklet from work, keep them nearby.</p></details>
         <details><summary>Is Lifinity a fit for newcomers?</summary><p>Yes. Lifinity's founder came to Canada as a student. Some insurance options depend on your residency status, and that gets checked together on your first call.</p></details>
-        <details><summary>Does Lifinity manage investment portfolios?</summary><p>No. Lifinity's advice covers life and health insurance, which includes segregated funds. Stocks, ETFs and mutual funds aren't offered.</p></details>
+        <details><summary>Does Lifinity manage investment portfolios?</summary><p>Not yet. Today, Lifinity's advice covers life and health insurance, including segregated funds. Investment services are in the works, and your advisor is working toward the licensing needed to offer them. Until then, stocks, ETFs and mutual funds aren't offered. <a href="#newsletter">Join the monthly email</a> to hear when that changes.</p></details>
       </div>
     </div>
   </section>
@@ -472,7 +472,7 @@ footer .wrap{display:grid;gap:2.2rem}
         <p class="lede">Book a 45-minute discovery call. Disclosure first, recommendations second, decisions always yours.</p>
         <div class="cta-row"><a class="btn btn-primary" href="https://scheduler.zoom.us/f/1klh9gol" target="_blank" rel="noopener">Book a discovery call <span class="arr" aria-hidden="true">&rarr;</span></a></div>
       </div>
-      <div class="news">
+      <div class="news" id="newsletter">
         <h3>Not ready to book?</h3>
         <p>Get one plain-English money note a month: insurance, RRSP and TFSA season, and what's changing in Canada.</p>
         <form id="news-form" data-action="REPLACE_WITH_BREVO_FORM_ACTION" novalidate>
