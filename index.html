@@ -45,6 +45,7 @@ a{color:var(--link);text-underline-offset:3px}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
 .wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 h1,h2,h3{font-family:var(--f-display);color:var(--heading);font-weight:500;letter-spacing:-.01em;text-wrap:balance;margin:0}
+p,li{text-wrap:pretty}
 h1{font-size:var(--s4);line-height:1.04;letter-spacing:-.02em}
 h2{font-size:var(--s3);line-height:1.12}
 h3{font-size:var(--s1);line-height:1.3;font-weight:600}
@@ -81,6 +82,7 @@ p{margin:0}
 .hero-copy{display:grid;gap:1.6rem;min-width:0}
 .hero-copy .lede strong{color:var(--ink);font-weight:600}
 .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem}
+.short{display:none}
 .facts{display:grid;grid-template-columns:repeat(3,minmax(0,auto));justify-content:start;gap:.8rem 2.25rem;padding:1.1rem 0 0;margin:.4rem 0 0;border-top:1px solid var(--line);list-style:none}
 .facts li{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.04em;color:var(--muted)}
 .facts b{display:block;font-family:var(--f-display);font-size:1.35rem;font-weight:500;letter-spacing:0;color:var(--heading)}
@@ -263,6 +265,8 @@ footer .wrap{display:grid;gap:2.2rem}
   .foot-top{grid-template-columns:minmax(0,1fr)}
   .portrait figcaption{max-width:88%}
   body{line-height:1.65}
+  .long{display:none}
+  .short{display:inline}
   .hero{padding-block:2.4rem 3.2rem}
   .hero-copy{gap:1.4rem}
   .lede{font-size:1.1rem;line-height:1.6}
@@ -307,17 +311,17 @@ footer .wrap{display:grid;gap:2.2rem}
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap">
       <div class="hero-copy">
-        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Lifinity Financial Services · Halifax, NS</span>
+        <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="long">Lifinity Financial Services · Halifax, NS</span><span class="short">Lifinity · Halifax, NS</span></span>
         <h1 id="hero-title">Get a plan before you get&nbsp;a&nbsp;policy.</h1>
-        <p class="lede">Lifinity helps families and business owners protect what they have, build for retirement and pass on what they've built. Every plan starts with a 45-minute discovery call, and <strong>the first thing you hear is how your advisor is paid.</strong></p>
+        <p class="lede"><span class="long">Lifinity helps families and business owners protect what they have, build for retirement and pass on what they've built. Every plan starts with a 45-minute discovery call, and <strong>the first thing you hear is how your advisor is paid.</strong></span><span class="short">Protect your family, build for retirement and pass it on. <strong>First, you hear how your advisor is paid.</strong></span></p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://scheduler.zoom.us/f/1klh9gol" target="_blank" rel="noopener">Book a discovery call <span class="arr" aria-hidden="true">&rarr;</span></a>
           <a class="btn btn-quiet" href="#how">See how it works</a>
         </div>
         <ul class="facts">
-          <li><b>5 provinces</b>NS · ON · AB · BC · SK</li>
-          <li><b>2 meetings</b>before any recommendation</li>
-          <li><b>4 stages</b>from Protect to Transfer</li>
+          <li><b>5 provinces</b><span class="long">NS · ON · AB · BC · SK</span><span class="short">NS ON AB BC SK</span></li>
+          <li><b>2 meetings</b><span class="long">before any recommendation</span><span class="short">then you decide</span></li>
+          <li><b>4 stages</b><span class="long">from Protect to Transfer</span><span class="short">life to legacy</span></li>
         </ul>
       </div>
       <figure class="idea" aria-label="Lifinity means life plus infinity">
@@ -338,23 +342,23 @@ footer .wrap{display:grid;gap:2.2rem}
       </div>
       <div class="compare">
         <div>
-          <h3>Starting with a product</h3>
-          <p class="big">One policy, picked before anyone asks about your life.</p>
+          <h3><span class="long">Starting with a product</span><span class="short">Product first</span></h3>
+          <p class="big"><span class="long">One policy, picked before anyone asks about your life.</span><span class="short">Policy first, questions later.</span></p>
           <ul role="list">
-            <li>How the advisor is paid comes up late, or not at all</li>
-            <li>Questions about your goals come after the pitch</li>
-            <li>The recommendation arrives in the first meeting</li>
-            <li>Coverage that fits today, not the next chapter</li>
+            <li><span class="long">How the advisor is paid comes up late, or not at all</span><span class="short">Pay disclosed late, if ever</span></li>
+            <li><span class="long">Questions about your goals come after the pitch</span><span class="short">Goals asked after the pitch</span></li>
+            <li><span class="long">The recommendation arrives in the first meeting</span><span class="short">Policy pitched at meeting one</span></li>
+            <li><span class="long">Coverage that fits today, not the next chapter</span><span class="short">Fits today, not tomorrow</span></li>
           </ul>
         </div>
         <div class="ours">
-          <h3>Starting with a plan</h3>
-          <p class="big">Your situation first. Recommendations second.</p>
+          <h3><span class="long">Starting with a plan</span><span class="short">Plan first</span></h3>
+          <p class="big"><span class="long">Your situation first. Recommendations second.</span><span class="short">Your life first, policy later.</span></p>
           <ul role="list">
-            <li>Disclosure first: licensing, the insurers involved and how your advisor is paid</li>
-            <li>We map your family, income, debts and goals before any product</li>
-            <li>Recommendations come at a second meeting, with the reasons in writing</li>
-            <li>Reviewed when life changes: a baby, a house, a business, retirement</li>
+            <li><span class="long">Disclosure first: licensing, the insurers involved and how your advisor is paid</span><span class="short">Pay disclosed up front</span></li>
+            <li><span class="long">We map your family, income, debts and goals before any product</span><span class="short">Goals mapped before any product</span></li>
+            <li><span class="long">Recommendations come at a second meeting, with the reasons in writing</span><span class="short">Advice at meeting two, in writing</span></li>
+            <li><span class="long">Reviewed when life changes: a baby, a house, a business, retirement</span><span class="short">Reviewed as life changes</span></li>
           </ul>
         </div>
       </div>
@@ -366,12 +370,12 @@ footer .wrap{display:grid;gap:2.2rem}
       <div class="sec-head">
         <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>How it works</span>
         <h2 id="how-title">Two meetings. No pressure in between.</h2>
-        <p class="lede">You'll always know what happens next, and you decide in your own time.</p>
+        <p class="lede"><span class="long">You'll always know what happens next, and you decide in your own time.</span><span class="short">Always know what's next. Decide in your own time.</span></p>
       </div>
       <ol class="steps">
-        <li><span class="n">STEP 1</span><h3>Answer a few quick questions</h3><p>It takes about 30 seconds. It tells your advisor where you live and what you'd like to talk about, so your first call starts prepared.</p><span class="tag">30 seconds · online</span></li>
-        <li><span class="n">STEP 2</span><h3>Discovery call on Zoom</h3><p>It opens with your advisor's disclosure, then you go through your situation together. Join from a laptop or desktop so you can look at the numbers on screen.</p><span class="tag">45 minutes · Zoom</span></li>
-        <li><span class="n">STEP 3</span><h3>Your recommendations</h3><p>At a second meeting you see what's recommended and why. Nothing is decided on the spot.</p><span class="tag">Second meeting · your pace</span></li>
+        <li><span class="n">STEP 1</span><h3>Answer a few quick questions</h3><p><span class="long">It takes about 30 seconds. It tells your advisor where you live and what you'd like to talk about, so your first call starts prepared.</span><span class="short">30 seconds, so your first call starts prepared.</span></p><span class="tag">30 seconds · online</span></li>
+        <li><span class="n">STEP 2</span><h3>Discovery call on Zoom</h3><p><span class="long">It opens with your advisor's disclosure, then you go through your situation together. Join from a laptop or desktop so you can look at the numbers on screen.</span><span class="short">Disclosure first, then your situation. Join from a laptop to see the numbers.</span></p><span class="tag">45 minutes · Zoom</span></li>
+        <li><span class="n">STEP 3</span><h3>Your recommendations</h3><p><span class="long">At a second meeting you see what's recommended and why. Nothing is decided on the spot.</span><span class="short">See what's recommended and why. No decisions on the spot.</span></p><span class="tag">Second meeting · your pace</span></li>
       </ol>
       <div class="after-steps">
         <a class="btn btn-primary" href="https://scheduler.zoom.us/f/1klh9gol" target="_blank" rel="noopener">Start with step 1 <span class="arr" aria-hidden="true">&rarr;</span></a>
@@ -385,17 +389,17 @@ footer .wrap{display:grid;gap:2.2rem}
       <div class="sec-head">
         <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>The Lifinity plan</span>
         <h2 id="plan-title">Planning for every chapter of life.</h2>
-        <p class="lede">Every plan follows the same four stages. Where you start depends on where you are today.</p>
+        <p class="lede"><span class="long">Every plan follows the same four stages. Where you start depends on where you are today.</span><span class="short">Four stages. You start wherever you are today.</span></p>
       </div>
       <ol class="stages">
-        <li class="stage"><div class="rise" aria-hidden="true"><span></span></div><div class="txt"><span class="n">STAGE 1</span><h3>Protect</h3><p>Life, critical illness and disability insurance, so your family's plan survives a bad day.</p></div></li>
-        <li class="stage"><div class="rise" aria-hidden="true"><span></span></div><div class="txt"><span class="n">STAGE 2</span><h3>Accumulate</h3><p>Savings plans that keep working: TFSA, RRSP, FHSA and segregated funds.</p></div></li>
-        <li class="stage"><div class="rise" aria-hidden="true"><span></span></div><div class="txt"><span class="n">STAGE 3</span><h3>Utilize</h3><p>Turning what you've saved into retirement income you can count on.</p></div></li>
-        <li class="stage"><div class="rise" aria-hidden="true"><span></span></div><div class="txt"><span class="n">STAGE 4</span><h3>Transfer</h3><p>Leaving more to the people you love, with insurance to help cover estate costs.</p></div></li>
+        <li class="stage"><div class="rise" aria-hidden="true"><span></span></div><div class="txt"><span class="n">STAGE 1</span><h3>Protect</h3><p><span class="long">Life, critical illness and disability insurance, so your family's plan survives a bad day.</span><span class="short">Life, critical illness and disability insurance.</span></p></div></li>
+        <li class="stage"><div class="rise" aria-hidden="true"><span></span></div><div class="txt"><span class="n">STAGE 2</span><h3>Accumulate</h3><p><span class="long">Savings plans that keep working: TFSA, RRSP, FHSA and segregated funds.</span><span class="short">TFSA, RRSP, FHSA and segregated funds.</span></p></div></li>
+        <li class="stage"><div class="rise" aria-hidden="true"><span></span></div><div class="txt"><span class="n">STAGE 3</span><h3>Utilize</h3><p><span class="long">Turning what you've saved into retirement income you can count on.</span><span class="short">Savings into steady retirement income.</span></p></div></li>
+        <li class="stage"><div class="rise" aria-hidden="true"><span></span></div><div class="txt"><span class="n">STAGE 4</span><h3>Transfer</h3><p><span class="long">Leaving more to the people you love, with insurance to help cover estate costs.</span><span class="short">Leaving more to the people you love.</span></p></div></li>
       </ol>
       <div class="owners">
         <h3>Own a business?</h3>
-        <p>Corporate-owned insurance, key person cover and group benefits for your team, planned alongside your personal goals.</p>
+        <p><span class="long">Corporate-owned insurance, key person cover and group benefits for your team, planned alongside your personal goals.</span><span class="short">Corporate insurance, key person cover and group benefits.</span></p>
       </div>
     </div>
   </section>
@@ -407,10 +411,10 @@ footer .wrap{display:grid;gap:2.2rem}
         <h2 id="who-title">People at a turning point.</h2>
       </div>
       <div class="who">
-        <div><h3>Young families</h3><p>A new baby or a new mortgage, and a family that depends on your income.</p></div>
-        <div><h3>Newcomers to Canada</h3><p>Building a life here and learning how Canadian insurance and savings plans work.</p></div>
-        <div><h3>Business owners</h3><p>Incorporated professionals and owners protecting the business and the people in it.</p></div>
-        <div><h3>Pre-retirees</h3><p>Ten years or less from retirement and wanting income that lasts.</p></div>
+        <div><h3>Young families</h3><p><span class="long">A new baby or a new mortgage, and a family that depends on your income.</span><span class="short">A new baby, a new mortgage.</span></p></div>
+        <div><h3>Newcomers to Canada</h3><p><span class="long">Building a life here and learning how Canadian insurance and savings plans work.</span><span class="short">New to how insurance and savings work here.</span></p></div>
+        <div><h3>Business owners</h3><p><span class="long">Incorporated professionals and owners protecting the business and the people in it.</span><span class="short">Protecting the business and its people.</span></p></div>
+        <div><h3>Pre-retirees</h3><p><span class="long">Ten years or less from retirement and wanting income that lasts.</span><span class="short">Ten years or less from retirement.</span></p></div>
       </div>
     </div>
   </section>
@@ -421,7 +425,7 @@ footer .wrap{display:grid;gap:2.2rem}
       <div class="sec-head">
         <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Questions</span>
         <h2 id="faq-title">What people ask before they book.</h2>
-        <p class="lede">Something else on your mind? Email <a href="mailto:gmon@lifinity.ca">gmon@lifinity.ca</a>.</p>
+        <p class="lede"><span class="long">Something else on your mind? Email</span><span class="short">Other questions? Email</span> <a href="mailto:gmon@lifinity.ca">gmon@lifinity.ca</a>.</p>
       </div>
       <div class="faq">
         <details><summary>Do I have to buy anything?</summary><p>No. The discovery call is for understanding your situation. You'll only see recommendations at a second meeting, and the decision is always yours.</p></details>
@@ -457,7 +461,7 @@ footer .wrap{display:grid;gap:2.2rem}
         <p class="sign">G Mon</p>
         <ul class="facts">
           <li><b>RRA<sup>®</sup></b>Registered Retirement Analyst</li>
-          <li><b>5 provinces</b>Licensed in NS · ON · AB · BC · SK</li>
+          <li><b>5 provinces</b><span class="long">Licensed in NS · ON · AB · BC · SK</span><span class="short">NS ON AB BC SK</span></li>
           <li><b>14,000+</b>follow <a href="https://www.instagram.com/gmontalks" target="_blank" rel="noopener" style="color:inherit">@gmontalks</a></li>
         </ul>
       </div>
@@ -469,12 +473,12 @@ footer .wrap{display:grid;gap:2.2rem}
       <div>
         <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Your next step</span>
         <h2 id="final-title" style="margin-top:1rem">Your plan should outlive you. That's the point.</h2>
-        <p class="lede">Book a 45-minute discovery call. Disclosure first, recommendations second, decisions always yours.</p>
+        <p class="lede"><span class="long">Book a 45-minute discovery call. Disclosure first, recommendations second, decisions always yours.</span><span class="short">A 45-minute call. Disclosure first. Decisions always yours.</span></p>
         <div class="cta-row"><a class="btn btn-primary" href="https://scheduler.zoom.us/f/1klh9gol" target="_blank" rel="noopener">Book a discovery call <span class="arr" aria-hidden="true">&rarr;</span></a></div>
       </div>
       <div class="news" id="newsletter">
         <h3>Not ready to book?</h3>
-        <p>Get one plain-English money note a month: insurance, RRSP and TFSA season, and what's changing in Canada.</p>
+        <p><span class="long">Get one plain-English money note a month: insurance, RRSP and TFSA season, and what's changing in Canada.</span><span class="short">One plain-English money note a month.</span></p>
         <form id="news-form" data-action="REPLACE_WITH_BREVO_FORM_ACTION" novalidate>
           <label for="news-email">Email address</label>
           <input id="news-email" name="EMAIL" type="email" autocomplete="email" placeholder="you@example.com" required>
