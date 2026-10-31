@@ -78,7 +78,7 @@ These rules come from the copywriting and design tutorials in `PLAYBOOK.md`.
    - If a line fails all three, rewrite it.
 3. **Facts over opinions.** Write "45-minute call", "licensed in 5 provinces", "a written summary after every call". Not "expert", "best", "trusted".
 4. **Juxtaposition.** The page's argument is *product first vs plan first*. New sections should support that contrast.
-5. **The unique promise:** "The first thing I tell you is how I'm paid." Keep it prominent.
+5. **Lead with the idea, not the process.** The hero carries Lifinity's long-term planning idea ("Plan for life. Build for generations.") and the three i's in Lifinity: Insurance, Investment, Independence. Keep the hero corporate and professional. How G Mon is paid belongs in the FAQ, the comparison and his story, not the hero. Avoid policy-first wording up top.
 6. **Short and plain.** Active voice. No buzzwords ("unlock", "empower", "seamless", "next level").
    - No mannered em-dash asides. Use Canadian spelling.
 7. **Voice of customer.** When real clients describe their problem in their own words, use their words, with permission.
@@ -91,6 +91,7 @@ G Mon is a **life and accident & sickness (LLQP) licensed agent** in NS, ON, AB,
 - **Stay inside the licence.**
   - Insurance and segregated funds only.
   - Never imply he sells or manages stocks, ETFs or mutual funds, or gives tax or legal advice.
+  - "Investment" (one of the three i's) means savings plans such as TFSA, RRSP and FHSA through segregated funds until securities licensing is in place.
   - Say "help cover estate costs", not "minimise taxes".
 - **Never say "free".** Don't call the call "free" or "complimentary". It's a "discovery call".
 - **No invented proof.**

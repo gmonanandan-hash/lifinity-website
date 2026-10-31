@@ -8,8 +8,8 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lifinity.ca/">
 <meta property="og:title" content="Lifinity Financial Services">
-<meta property="og:description" content="Get a plan before you get a policy. Book a 45-minute discovery call with G Mon, RRA.">
-<meta property="og:image" content="https://lifinity.ca/og-image.png">
+<meta property="og:description" content="Plan for life. Build for generations. One long-term plan for families and business owners in NS, ON, AB, BC and SK.">
+<meta property="og:image" content="https://lifinity.ca/og-image.png?v=2">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -98,10 +98,15 @@ p{margin:0}
 .portrait figcaption span{font-size:.82rem;color:var(--band-muted)}
 .idea{position:relative;background:var(--band);color:var(--band-ink);border-radius:var(--radius);aspect-ratio:4/5;overflow:hidden;padding:clamp(1.6rem,3vw,2.4rem);display:flex;flex-direction:column;gap:.9rem;min-width:0;margin:0}
 .idea .eq{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--band-muted)}
+.idea .eq .word{color:var(--band-ink)}
 .idea .eq b{color:var(--accent);font-weight:500}
 .idea .say{font-family:var(--f-display);font-weight:400;font-size:clamp(1.55rem,1.15rem + 1.3vw,2.25rem);line-height:1.15;color:var(--band-ink);max-width:13ch}
-.idea .corner{position:absolute;left:13%;bottom:13%;width:56%;height:44%;border-left:clamp(14px,2vw,22px) solid var(--band-ink);border-bottom:clamp(14px,2vw,22px) solid var(--band-ink)}
-.idea .mark-dots{position:absolute;left:34%;bottom:36%;width:44%;height:auto}
+.idea .say span{display:block}
+.idea .say b{color:var(--accent);font-weight:inherit}
+.idea .corner{position:absolute;left:13%;bottom:13%;width:56%;height:40%;border-left:clamp(14px,2vw,22px) solid var(--band-ink);border-bottom:clamp(14px,2vw,22px) solid var(--band-ink)}
+.idea .mark-dots{position:absolute;left:34%;bottom:31%;width:42%;height:auto}
+.h1a{display:block}
+.nowrap{white-space:nowrap}
 .idea .chapters{position:absolute;left:13%;right:9%;bottom:5.5%;display:flex;justify-content:space-between;gap:.5rem;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--band-muted)}
 .about-portrait{margin-top:1.4rem}
 .letter .portrait::before{border-color:var(--band-ink)}
@@ -274,7 +279,8 @@ footer .wrap{display:grid;gap:2.2rem}
   .facts b{font-size:1.12rem}
   .facts li{font-size:.7rem;letter-spacing:.02em;line-height:1.45}
   .idea{min-height:380px;max-width:none;margin-top:.6rem}
-  .idea .say{font-size:1.45rem;max-width:12ch}
+  .idea .say{font-size:1.45rem;max-width:13ch}
+  .h1a{display:inline}
   .idea .corner{bottom:18%;height:31%;width:50%}
   .idea .mark-dots{bottom:38%;width:40%;left:30%}
   .idea .chapters{font-size:.58rem;letter-spacing:.07em;left:8%;right:8%}
@@ -312,24 +318,24 @@ footer .wrap{display:grid;gap:2.2rem}
     <div class="wrap">
       <div class="hero-copy">
         <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="long">Lifinity Financial Services · Halifax, NS</span><span class="short">Lifinity · Halifax, NS</span></span>
-        <h1 id="hero-title">Get a plan before you get&nbsp;a&nbsp;policy.</h1>
-        <p class="lede"><span class="long">Lifinity helps families and business owners protect what they have, build for retirement and pass on what they've built. Every plan starts with a 45-minute discovery call, and <strong>the first thing you hear is how your advisor is paid.</strong></span><span class="short">Protect your family, build for retirement and pass it on. <strong>First, you hear how your advisor is paid.</strong></span></p>
+        <h1 id="hero-title"><span class="h1a">Plan for life.</span> Build for generations.</h1>
+        <p class="lede"><span class="long">Lifinity builds one long-term plan for families and business owners: protecting what you have, growing what you save and building the independence to live and retire on your terms.</span><span class="short">One long-term plan to protect what you have, grow what you save and retire on your terms.</span></p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://scheduler.zoom.us/f/1klh9gol" target="_blank" rel="noopener">Book a discovery call <span class="arr" aria-hidden="true">&rarr;</span></a>
           <a class="btn btn-quiet" href="#how">See how it works</a>
         </div>
         <ul class="facts">
-          <li><b>5 provinces</b><span class="long">NS · ON · AB · BC · SK</span><span class="short">NS ON AB BC SK</span></li>
+          <li><b>5 provinces</b><span class="long nowrap">NS · ON · AB · BC · SK</span><span class="short">NS ON AB BC SK</span></li>
           <li><b>In writing</b><span class="long">a summary after your call</span><span class="short">after your call</span></li>
           <li><b>4 stages</b><span class="long">from Protect to Transfer</span><span class="short">life to legacy</span></li>
         </ul>
       </div>
-      <figure class="idea" aria-label="Lifinity means life plus infinity">
-        <p class="eq">Life + infinity = <b>Lifinity</b></p>
-        <p class="say">Planning that lasts longer than you do.</p>
+      <figure class="idea" aria-label="Lifinity means life plus infinity. Its three i's stand for insurance, investment and independence.">
+        <p class="eq">Life + infinity = <span class="word">L<b>i</b>f<b>i</b>n<b>i</b>ty</span></p>
+        <p class="say"><span><b>I</b>nsurance.</span> <span><b>I</b>nvestment.</span> <span><b>I</b>ndependence.</span></p>
         <span class="corner" aria-hidden="true"></span>
-        <svg class="mark-dots" viewBox="0 0 120 100" aria-hidden="true"><circle cx="14" cy="86" r="11" fill="var(--accent)"/><circle cx="52" cy="54" r="15" fill="var(--accent)"/><circle cx="98" cy="18" r="19" fill="var(--accent)"/></svg>
-        <span class="chapters" aria-hidden="true"><span>Protect</span><span>Accumulate</span><span>Utilize</span><span>Transfer</span></span>
+        <svg class="mark-dots" viewBox="0 -3 120 103" aria-hidden="true"><circle cx="14" cy="86" r="11" fill="var(--accent)"/><circle cx="52" cy="54" r="15" fill="var(--accent)"/><circle cx="98" cy="18" r="19" fill="var(--accent)"/></svg>
+        <span class="chapters" aria-hidden="true"><span>The three i's in Lifinity</span></span>
       </figure>
     </div>
   </section>
