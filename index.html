@@ -222,7 +222,7 @@ section,#newsletter{scroll-margin-top:84px}
 .news h3{font-size:1.2rem;color:var(--heading)}
 .news p{color:var(--muted);font-size:.98rem}
 .news form{display:flex;gap:.5rem;flex-wrap:wrap}
-.news label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.news label,.news .hp{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);border:0;padding:0}
 .news input[type=email]{flex:1 1 200px;min-width:0;font:inherit;font-size:1rem;padding:.85rem .9rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);color:var(--ink)}
 .news input[type=email]:focus{outline:2px solid var(--accent);outline-offset:1px}
 .news button{background:var(--band);color:var(--band-ink)}
@@ -509,9 +509,12 @@ footer .wrap{display:grid;gap:2.2rem}
       <div class="news" id="newsletter">
         <h3>Not ready to book?</h3>
         <p><span class="long">Get one plain-English money note a month: insurance, RRSP and TFSA season, and what's changing in Canada.</span><span class="short">One plain-English money note a month.</span></p>
-        <form id="news-form" data-action="REPLACE_WITH_BREVO_FORM_ACTION" novalidate>
+        <form id="news-form" data-action="https://52b4d5ea.sibforms.com/serve/MUIFAC-Fs6kkbT7rkzahpCVqXxR9kqnyNX9fF-fEtqcO9hGfKptkv0Gr9pxHqXTAGV2q_6sgBnYcvvCljCqo5VJH9AyiQBpNeI-BfSvMEvMo35JsRWRgsOpjQRzUgEiAZw6kITNw3lNzMfXgyJciWf1x7SmNRWxpy8xbWS8WYAN1xrib9I26B_hRV5QDfOKKEcriLLI6C4OEfNoz3g==" novalidate>
           <label for="news-email">Email address</label>
           <input id="news-email" name="EMAIL" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="locale" value="en">
+          <input type="hidden" name="html_type" value="simple">
           <button class="btn" type="submit">Subscribe</button>
         </form>
         <small>By subscribing you agree to receive Lifinity's monthly email. Unsubscribe any time.</small>
@@ -554,14 +557,21 @@ footer .wrap{display:grid;gap:2.2rem}
 (function(){
   var form=document.getElementById('news-form'), msg=document.getElementById('news-msg');
   if(!form) return;
+  if(/[?&]subscribed=1/.test(location.search)){ msg.hidden=false; msg.textContent='Thanks for confirming. You’re subscribed to Lifinity’s monthly note.'; }
   form.addEventListener('submit', function(e){
     var email=document.getElementById('news-email'), action=form.getAttribute('data-action')||'';
     if(!email.value || !email.checkValidity()){ e.preventDefault(); msg.hidden=false; msg.textContent='Please enter a valid email address.'; email.focus(); return; }
     if(action.indexOf('http')!==0){ e.preventDefault(); msg.hidden=false; msg.textContent='Signup isn’t connected yet. Email gmon@lifinity.ca and I’ll add you.'; return; }
     e.preventDefault();
-    var data=new FormData(form);
-    fetch(action,{method:'POST',body:data,mode:'no-cors'}).then(function(){ msg.hidden=false; msg.textContent='You’re on the list. Check your inbox to confirm.'; form.reset(); })
-      .catch(function(){ msg.hidden=false; msg.textContent='Something went wrong. Email gmon@lifinity.ca and I’ll add you.'; });
+    var data=new URLSearchParams(new FormData(form)), btn=form.querySelector('button[type=submit]');
+    btn.disabled=true;
+    fetch(action+'?isAjax=1',{method:'POST',body:data}).then(function(r){ return r.json(); }).then(function(j){
+      msg.hidden=false;
+      if(j && j.success){ msg.textContent='Almost done. Check your inbox and click the link to confirm.'; form.reset(); }
+      else if(j && j.errors && j.errors.EMAIL){ msg.textContent='Please check your email address and try again.'; email.focus(); }
+      else { msg.textContent='Something went wrong. Email gmon@lifinity.ca and I’ll add you.'; }
+    }).catch(function(){ msg.hidden=false; msg.textContent='Something went wrong. Email gmon@lifinity.ca and I’ll add you.'; })
+      .then(function(){ btn.disabled=false; });
   });
 })();
 </script>
