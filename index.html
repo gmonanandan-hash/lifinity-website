@@ -181,7 +181,18 @@ section,#newsletter{scroll-margin-top:84px}
 
 /* founder letter */
 .letter .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(2rem,6vw,5rem);align-items:start}
-.letter aside{display:grid;gap:1rem;position:sticky;top:110px}
+.letter aside{display:grid;gap:1rem}
+.letter .lead{font-family:var(--f-display);font-weight:400;font-size:clamp(1.55rem,1.2rem + 1.1vw,2.1rem);line-height:1.25;color:var(--band-ink);margin:0 0 1.8rem;text-wrap:balance}
+.letter .lead span{display:block;color:var(--accent)}
+.path{margin-top:2.6rem}
+.path-h{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--band-muted);margin:0 0 1.2rem}
+.path ol{list-style:none;margin:0;padding:0;position:relative;display:grid;gap:1.15rem}
+.path li{position:relative;padding-left:2rem}
+.path li:not(:last-child)::after{content:"";position:absolute;left:6px;top:1.35rem;bottom:-1.15rem;width:2px;background:var(--band-line)}
+.path li::before{content:"";position:absolute;left:0;top:.42rem;width:14px;height:14px;border-radius:50%;background:var(--band);border:2px solid var(--accent);box-sizing:border-box}
+.path li:last-child::before{background:var(--accent)}
+.path b{display:block;font-family:var(--f-display);font-weight:500;font-size:1.12rem;line-height:1.3;color:var(--band-ink)}
+.path span{font-size:.92rem;color:var(--band-muted)}
 .letter .avatar{width:112px;height:112px;border-radius:50%;background:var(--frame);overflow:hidden;border:3px solid var(--accent)}
 .letter .avatar img{width:100%;height:auto;transform:translateY(2%) scale(1.9);transform-origin:50% 0}
 .letter aside .name{font-family:var(--f-display);font-size:var(--s2);color:var(--band-ink);line-height:1.2}
@@ -457,17 +468,30 @@ footer .wrap{display:grid;gap:2.2rem}
         <figcaption><b>G Mon (Anandakrishnan Gopalakrishnan), RRA<sup>®</sup></b><span>Financial Advisor, Lifinity Financial Services Inc.</span></figcaption>
       </figure>
         </div>
+        <div class="path">
+          <p class="path-h">From engineering to Lifinity</p>
+          <ol>
+            <li><b>Mechanical engineering</b><span>Degree and first job in India</span></li>
+            <li><b>Supply chain management</b><span>Cape Breton University</span></li>
+            <li><b>Stores clerk to senior buyer</b><span>Nova Scotia's health system</span></li>
+            <li><b>Financial industry</b><span>Since 2021, full time since 2025</span></li>
+            <li><b>Lifinity Financial Services</b><span>Founder</span></li>
+          </ol>
+        </div>
       </aside>
       <div>
+        <p class="lead">An engineer's eye for risk. <span>A buyer's discipline for value.</span></p>
         <blockquote>
-          <p>I came to Canada as a student. Soon after I finished my studies, an accident showed me how quickly a peaceful life can change, and how much it matters to have a plan before you need one.</p>
-          <p>I've worked in the financial industry since 2021. In December 2025 I left a senior buyer role in Nova Scotia's health system to do this full time, because I wanted to give people the advice I wish I'd had.</p>
-          <p>I built Lifinity on one rule: your interest comes before mine. That's why I tell you how I'm paid before you tell me anything about your money.</p>
+          <p>Engineering is where I started. I studied mechanical engineering in India and began my career at a petrochemical company, where you learn early that good systems are built for the day something goes wrong.</p>
+          <p>I came to Canada to study supply chain management. Soon after I finished, an accident showed me how quickly a peaceful life can change, and how much it matters to have a plan before you need one.</p>
+          <p>In Nova Scotia's health system I grew from stores clerk to senior buyer. My job was to compare suppliers, read the fine print and get the best value for the people who depended on us. Along the way, finance and planning became my passion, and in December 2025 I left that role to build Lifinity full time.</p>
+          <p>I bring the same discipline to your plan. I compare options across insurance companies, explain the trade-offs in plain English and put your interest before mine. That's why I tell you how I'm paid before you tell me anything about your money.</p>
+          <p>And I keep learning. After earning my RRA<sup>®</sup> designation, I'm working toward my securities licence, because your plan deserves an advisor who keeps getting better.</p>
         </blockquote>
         <p class="sign">G Mon</p>
         <ul class="facts">
           <li><b>RRA<sup>®</sup></b>Registered Retirement Analyst</li>
-          <li><b>5 provinces</b><span class="long">Licensed in NS · ON · AB · BC · SK</span><span class="short">NS ON AB BC SK</span></li>
+          <li><b>5 provinces</b><span class="long">Licensed in <span class="nowrap">NS · ON · AB · BC · SK</span></span><span class="short">NS ON AB BC SK</span></li>
           <li><b>14,000+</b>follow <a href="https://www.instagram.com/gmontalks" target="_blank" rel="noopener" style="color:inherit">@gmontalks</a></li>
         </ul>
       </div>
